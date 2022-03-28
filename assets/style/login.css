@@ -4,6 +4,33 @@
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #1b2735  100%);
     overflow: hidden;
   }
+
+  #loginCard{
+    height: 60vh;
+    width: 60vw;
+    /* background-image: linear-gradient(to top, #dfe9f3 0%, white 100%); */
+    /* background-image: linear-gradient(to right, #243949 0%, #517fa4 100%); */
+    /* background-image: linear-gradient(to top, #09203f 0%, #537895 100%); */
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    margin: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border: 1px solid rgb(55, 54, 56);
+  }
+
+  #loginCard h1{
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    color: wheat;
+    font-size: 80px;
+  }
+
+  audio{
+    display: none;
+  }
   
   #stars {
     width: 1px;

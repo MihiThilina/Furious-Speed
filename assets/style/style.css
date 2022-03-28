@@ -1,0 +1,17 @@
+#loader_container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: white;
+}
+
+#loader_container > img {
+    width: 700px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
