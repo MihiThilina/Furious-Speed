@@ -82,6 +82,8 @@ const player = new Player();
 
 // bubbles
  const bubblesArray = [];
+ const bubble = new Image();
+ bubble.src = 'https://i.ibb.co/ZX3thkw/pop2.png';
  class Bubble{
      constructor(){
          this.x =Math.random() * canvas.width;
@@ -91,6 +93,10 @@ const player = new Player();
          this.distance;
          this.counted = false;
          this.sound = Math.random() <=0
+        this.frameX = 0;
+        this.spriteWidth = 91;
+        this.spriteHeight = 91;
+        this.pop = false;
      }
      update(){
          this.y -=this.speed;
@@ -99,12 +105,14 @@ const player = new Player();
          this.distance =Math.sqrt(dx*dx + dy*dy);
      }
      draw(){
-         ctx.fillStyle = 'blue';
-         ctx.beginPath();
-         ctx.arc(this.x,this.y, this.redius,0,Math.PI * 2);
-         ctx.fill();
-         ctx.closePath();
-         ctx.stroke();
+        //  ctx.fillStyle = 'white';
+        //  ctx.beginPath();
+        //  ctx.arc(this.x,this.y, this.redius,0,Math.PI * 2);
+        //  ctx.fill();
+        //  ctx.closePath();
+        //  ctx.stroke();
+
+         ctx.drawImage(bubble, this.frameX * this.spriteWidth, 0, this.spriteWidth, this.spriteHeight, this.x - 68, this.y - 68, this.spriteWidth*1.5, this.spriteHeight*1.5);
      }
  }
 
@@ -140,8 +148,8 @@ function animate(){
     handleBubbels();
     player.update();
     player.draw();
-    ctx.fillStyle ='black';
-    ctx.fillText('Score' + score , 10 ,50);
+    ctx.fillStyle ='white';
+    ctx.fillText(' score  ' + score , 10 ,50);
     gameFrame++;
     requestAnimationFrame(animate);
 }
